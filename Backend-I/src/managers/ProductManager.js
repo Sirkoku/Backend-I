@@ -8,9 +8,10 @@ constructor() {
 
 async _readFile() {
     try {
+    console.log("leyendo desde:",this.path);
     const data = await fs.readFile(this.path, 'utf-8');
     return JSON.parse(data);
-    } catch {
+    } catch (error) {
     return [];
     }
 }
@@ -55,14 +56,14 @@ const updatedProduct = {
 };
 
 products[index] = updatedProduct;
-await fs.promises.writeFile(this.path, JSON.stringify(products, null, 2));
+await this.writeFile(products);
 return updatedProduct;
 }
 
 
 async deleteProduct(id) {
     const products = await this.getProducts();
-    const filtered = products.findIndex(p => p.id == id);
+    const index = products.findIndex(p => p.id == id);
 
     if (index === -1) return false;
     

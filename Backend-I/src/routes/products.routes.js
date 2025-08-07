@@ -6,9 +6,14 @@ const productManager = new ProductManager();
 
 // Listar todos los productos
 router.get('/', async (req, res) => {
-const products = await productManager.getProducts();
-res.json(products);
+try {
+    const products = await productManager.getProducts();
+    res.status(200).json(products);
+} catch (error) {
+    res.status(500).json({ error: 'Error al obtener productos' });
+}
 });
+
 
 // Obtener producto por id
 router.get('/:pid', async (req, res) => {
@@ -18,7 +23,8 @@ const products = await productManager.getProducts();
 const product = products.find(p => p.id == pid);
 
 if (product) {
-    res.json(product);
+    res.setHeader("Content-Type","application/json");
+    res.status(200).json(product)
 } else {
     res.status(404).json({ error: 'Producto no encontrado' });
 }
