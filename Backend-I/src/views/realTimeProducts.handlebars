@@ -1,0 +1,29 @@
+<h1 style="text-align:center; margin-bottom:20px;">Productos en tiempo real</h1>
+
+<div id="productList" style="
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+">
+    {{#each products}}
+        <div style="
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        ">
+            <h3 style="margin: 0 0 10px 0;">{{this.title}}</h3>
+            <p><strong>ID:</strong> {{this.id}}</p>
+            <p><strong>Precio:</strong> ${{this.price}}</p>
+            <p><strong>Categoría:</strong> {{this.category}}</p>
+            <p><strong>Stock:</strong> {{this.stock}}</p>
+            <p><strong>Código:</strong> {{this.code}}</p>
+        </div>
+    {{/each}}
+</div>
+
+<!-- cliente socket.io -->
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="/js/realtime.js"></script>

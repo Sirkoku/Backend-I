@@ -1,12 +1,79 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "status": true,
     "thumbnails": [],
-    "title": "Remera Akatsuki2",
-    "description": "Remera negra con nubes rojas",
-    "price": 2000,
+    "title": "Chaleco camuflado",
+    "description": "Chaleco táctico con múltiples bolsillos",
+    "price": 90,
+    "code": "CHV001",
+    "stock": 20,
+    "category": "indumentaria"
+  },
+  {
+    "id": 2,
+    "status": true,
+    "thumbnails": [],
+    "title": "Botas impermeables de caza",
+    "description": "Botas altas, resistentes al agua y barro",
+    "price": 120,
+    "code": "BTS001",
     "stock": 15,
-    "category": "remeras"
+    "category": "indumentaria"
+  },
+  {
+    "id": 3,
+    "status": true,
+    "thumbnails": [],
+    "title": "Mochila táctica 40L",
+    "description": "Mochila camuflada con múltiples compartimentos",
+    "price": 70,
+    "code": "MCH001",
+    "stock": 25,
+    "category": "accesorios"
+  },
+  {
+    "id": 4,
+    "status": true,
+    "thumbnails": [],
+    "title": "Munición calibre 12",
+    "description": "Caja de 25 cartuchos calibre 12 para escopeta",
+    "price": 60,
+    "code": "MUN12",
+    "stock": 50,
+    "category": "municiones"
+  },
+  {
+    "id": 5,
+    "status": true,
+    "thumbnails": [],
+    "title": "Arco compuesto de caza",
+    "description": "Arco de alto rendimiento con mira y estabilizador",
+    "price": 800,
+    "code": "ARC001",
+    "stock": 5,
+    "category": "armas"
+  },
+  {
+    "id": 6,
+    "status": true,
+    "thumbnails": [],
+    "title": "Rifle de caza calibre 308",
+    "description": "Rifle semiautomático para caza mayor",
+    "price": 1500,
+    "code": "RFL308",
+    "stock": 10,
+    "category": "armas"
+  },
+  {
+    "id": 7,
+    "status": true,
+    "thumbnails": [],
+    "title": "Navaja de caza actualizada",
+    "price": 60,
+    "stock": 25,
+    "code": "NVJ001",
+    "category": "armas",
+    "description": "Navaja de mano"
   }
 ]
