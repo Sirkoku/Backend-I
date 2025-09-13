@@ -1,0 +1,19 @@
+<h1>🛒 Carrito</h1>
+
+{{#if cart.products.length}}
+<ul>
+{{#each cart.products}}
+    <li style="margin-bottom: 12px; border: 1px solid #ccc; padding: 10px; border-radius: 8px;">
+    <p><b>Producto:</b> {{this.product.title}}</p>
+    <p><b>Precio:</b> ${{this.product.price}}</p>
+    <p><b>Categoría:</b> {{this.product.category}}</p>
+    <p><b>Cantidad:</b> {{this.quantity}}</p>
+    </li>
+{{/each}}
+</ul>
+{{else}}
+<p>El carrito está vacío.</p>
+{{/if}}
+
+<a href="/">⬅️ Volver al Home</a>
+<a href="/realtimeproducts">⚡ Productos en tiempo real</a>
