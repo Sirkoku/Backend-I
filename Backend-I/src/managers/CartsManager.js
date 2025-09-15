@@ -9,7 +9,11 @@ async getCartById(cid) {
     return await Cart.findById(cid).populate("products.product").lean();
 }
 
-async addProductToCart(cid, pid, quantity = 1) {
+async replaceProducts(cid, products) {
+    return await Cart.findByIdAndUpdate(cid, { products }, { new: true });
+}
+
+async updateProductQuantity(cid, pid, quantity = 1) {
     const cart = await Cart.findById(cid);
     if (!cart) throw new Error("Carrito no encontrado");
 
@@ -25,7 +29,7 @@ async addProductToCart(cid, pid, quantity = 1) {
     return cart;
 }
 
-async removeProductFromCart(cid, pid) {
+async removeProduct(cid, pid) {
     const cart = await Cart.findById(cid);
     if (!cart) throw new Error("Carrito no encontrado");
 
